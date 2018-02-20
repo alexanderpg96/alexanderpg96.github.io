@@ -1,28 +1,155 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Alexander Pearson-Goulart</title>
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/cv">CV</a></li>
-        		<li><a href="/blog">Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Hi there, I'm Alexander!</h1>
-				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-			</ul>
-		</footer>
-	</body>
+<!doctype html>
+
+<html lang="">
+
+    <head>
+    
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="Alexander Pearson-Goulart - Entrepeneur, Web Developer, Data Analyst">
+        <meta name="viewport" content="width=device-width, intial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="hamburgers.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        
+        <script>
+        
+            $(document).scroll(function(e){
+
+	            var scrollAmount = $(window).scrollTop();
+                var documentHeight = $(window).height();
+                
+                var scrollPercent = (scrollAmount / documentHeight) * 100;
+                
+                if(scrollPercent > 90) {
+                    $('.main-header').addClass('solid-head');
+	            }
+                
+                if(scrollPercent < 90) {
+                    $('.main-header').removeClass('solid-head');
+                }
+                
+            });
+        
+        </script>
+
+            <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    
+    </head>
+    
+    <body>
+        
+        <div id="content">
+            <!-- <img class="headshot" src="images/headshot.png"> -->
+            <div class="background"></div>
+
+            <div id="side-menu">
+                    <ul>
+                        <h3 class="black"><a href="resume">Resume</a></h3>
+                        <br />
+                        <h3 class="black"><a href="projects">Projects</a></h3>
+                        <br />
+                        <h3 class="black"><a href="socials">Socials</a></h3>
+                        <br />
+                        <h3 class="black"><a href="blog">Blog</a></h3>
+                    </ul>
+                </div>
+
+            <div id="name-container">
+                <div id="name">
+                    <h1>Alexander</h1>
+                    <h1 class="indent">Pearson-Goulart</h1>
+                </div>
+
+                <div class="hamburger hamburger--slider">
+                    <div class="hamburger-box">
+                      <div class="hamburger-inner"></div>
+                    </div>
+                </div>
+
+                <div id="arrow">
+                    <a href="#intro"><span></span></a>
+                </div>
+            </div>
+
+            <section id="intro">
+                <h2>Hello, I'm <span class="yellow">Alexander.</span></h2>
+
+                <p>I like to solve social problems with novel technologies.</p>
+
+                <p>I currently attend San Diego State University, completing a B.S. in Computer Science with a minor in Gerontology.</p>
+
+                <p>Currently my emphasis in my studies is data analysis and computation, with the goal of tying in my strong web development background to master on-the-go analysis of constantly changing data.</p>
+
+                <p>Outside of my studies and profession, I enjoy biking, running, and finding the next concert to attend.</p>
+            </section>
+            
+            <section id="skills">
+                <h2>I can do <span class="black">a lot.</span></h2>
+
+                <ul>
+                    <li class="str">Java</li>
+                    <li class="str">Typescript/Angular</li>
+                    <li class="str">SASS/LESS</li>
+                    <li class="str">Laravel Framework</li>
+                    <li class="str">SQL/MySQL</li>
+                    <li class="str">Swift</li>
+                    <li class="str">Python</li>
+                </ul>
+            </section>
+
+            <section id="projects">
+                <h2>Here's some things I've <span class="yellow">done.</span></h2>
+
+                <div class="indent">
+                    <h3 class="black"><a href="projects/yourunity">YourUnity</a></h3>
+                    <p class="italic">Laravel Framework, LAMP Stack, Google API</p>
+                    <p>Web application that brings college students and their communities together.</p>
+                    <h3 class="black"><a href="projects/yourunityapp">YourUnity Mobile</a></h3>
+                    <p class="italic">Android, iOS, Ionic Framework</p>
+                    <p>Application that gives college students access to volunteer events in their area.</p>
+                    <h3 class="black"><a href="projects/weathercompare">Weather Compare</a></h3>
+                    <p class="italic">HTML, CSS, Javascript, Weather.com API</p>
+                    <p>Compares the weather in two different locations in the United States.</p>
+                    <h3 class="black">More.</h3>
+                </div>
+            </section>
+
+            <footer>
+                <p>Alexander Pearson-Goulart &copy; 2018</p>
+            </footer>
+
+        </div>
+
+    </body>
+
+    <script>
+        var $hamburger = $(".hamburger");
+        $("#side-menu").toggle();
+        $hamburger.click(function() {
+            $hamburger.toggleClass("is-active");
+            $("#side-menu").toggle(100);
+            // Do something else, like open/close menu
+        });
+    </script>
+
 </html>
+
+<!-- <ul class="side-links">
+        <li>
+            <a href="">Resume</a>
+        </li>
+        <li>
+            <a href="">Projects</a>
+        </li>
+        <li>
+            <a href="">Blog</a>
+        </li>
+        <li>
+            <a href="">Contact</a>
+        </li>
+    </ul> -->
