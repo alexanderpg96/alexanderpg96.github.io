@@ -1,0 +1,120 @@
+<!doctype html>
+
+<html lang="">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Socials - Alexander Pearson-Goulart</title>
+    <meta name="description" content="Alexander Pearson-Goulart - Entrepeneur, Web Developer, Data Analyst">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hamburgers.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>
+
+        $(document).scroll(function (e) {
+
+            var scrollAmount = $(window).scrollTop();
+            var documentHeight = $(window).height();
+
+            var scrollPercent = (scrollAmount / documentHeight) * 100;
+
+            if (scrollPercent > 90) {
+                $('.main-header').addClass('solid-head');
+            }
+
+            if (scrollPercent < 90) {
+                $('.main-header').removeClass('solid-head');
+            }
+
+        });
+
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+
+    <style>
+        .black .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+            background-color: #000 !important; 
+          }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="content">
+        <div id="page-title"><h1 class="black">Socials</h1></div>
+        <div class="black hamburger hamburger--slider">
+            <div class="hamburger-box">
+              <div class="hamburger-inner"></div>
+            </div>
+        </div>
+
+        <div id="side-menu">
+            <ul>
+                <h3 class="black"><a href="index.html">Home</a></h3>
+                <br />
+                <h3 class="black"><a href="Resume.pdf">Resume</a></h3>
+                <br />
+                <h3 class="black"><a href="projects">Projects</a></h3>
+                <br />
+                <h3 class="black"><a href="blog">Blog</a></h3>
+            </ul>
+        </div>
+
+        <section id="socials">
+            <a class="social-link" href="https://www.linkedin.com/in/alexander-pearson-goulart/">
+                <img src="images/linkedin-logo.png">
+                <p>Alexander Pearson-Goulart</p>
+            </a>
+            <a class="social-link" href="https://github.com/alexanderpg96">
+                <img src="images/github-logo.png">
+                <p>AlexanderPG96</p>
+            </a>
+            <a class="social-link" href="https://www.instagram.com/alexanderpg/">
+                <img src="images/instagram-logo.png">
+                <p>AlexanderPG</p>
+            </a>
+        </section>
+
+        <footer>
+            <p>Alexander Pearson-Goulart &copy; 2018</p>
+        </footer>
+
+    </div>
+
+</body>
+
+<script>
+    var $hamburger = $(".hamburger");
+    $("#side-menu").toggle();
+    $hamburger.click(function () {
+        $hamburger.toggleClass("is-active");
+        $("#side-menu").toggle(100);
+        // Do something else, like open/close menu
+    });
+</script>
+
+</html>
+
+<!-- <ul class="side-links">
+        <li>
+            <a href="">Resume</a>
+        </li>
+        <li>
+            <a href="">Projects</a>
+        </li>
+        <li>
+            <a href="">Blog</a>
+        </li>
+        <li>
+            <a href="">Contact</a>
+        </li>
+    </ul> -->

@@ -677,7 +677,7 @@ footer p {
 }
 
 #side-menu a, #side-menu a:visited {
-  color: #fff;
+  color: #fff !important;
   text-decoration: none;
 }
 
@@ -692,10 +692,45 @@ footer p {
   margin-top: 5vh;
 }
 
+/** Socials Page **/
+
+#page-title {
+  padding: 5%;
+  width: 90%;
+  height: 100%;
+  color: #000;
+}
+
+#page-title h1 {
+  font-size: 2.9rem !important;
+}
+
+#socials {
+  padding: 5%;
+  padding-top: 10vh;
+  width: 90%;
+  height: 100%;
+  color: #000;
+  text-align: center;
+}
+
+#socials img {
+  width: 50%;
+}
+
+.social-link {
+  color: #000;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  border-bottom: 5px solid #FFCC02;
+}
+
 @media (min-width: 1000px) { 
   #side-menu {
     width: 30vw;
-    height: 100vh;
+    height: 90vh;
     padding-top: 10vh;
     position: absolute;
     right: 0vw;
@@ -754,5 +789,25 @@ footer p {
   
   footer p {
     font-size: 1rem;
+  }
+
+  /** Socials Page **/
+
+  #page-title {
+    padding: 2%;
+  }
+
+  #socials {
+    padding: 5%;
+    padding-top: 2%;
+    padding-bottom: 0;
+    width: 90%;
+    height: 100%;
+    color: #000;
+    text-align: center;
+  }
+
+  #socials img {
+    width: 6vw;
   }
 }
