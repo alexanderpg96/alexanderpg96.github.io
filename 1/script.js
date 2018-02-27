@@ -42,7 +42,7 @@ $(document).ready(function($) {
   
     function getWeather() {
         $.ajax({
-          url : "http://api.wunderground.com/api/61089ef9177c76cd/geolookup/conditions/q/" + state + "/" + location + ".json",
+          url : "https://api.wunderground.com/api/61089ef9177c76cd/geolookup/conditions/q/" + state + "/" + location + ".json",
           dataType : "jsonp",
             async: false,
           success : function(parsed_json) {
@@ -55,7 +55,7 @@ $(document).ready(function($) {
           });
 
             $.ajax({
-          url : "http://api.wunderground.com/api/61089ef9177c76cd/geolookup/conditions/q/" + state2 + "/" + location2 + ".json",
+          url : "https://api.wunderground.com/api/61089ef9177c76cd/geolookup/conditions/q/" + state2 + "/" + location2 + ".json",
           dataType : "jsonp",
                async: false, 
           success : function(parsed_json) {
