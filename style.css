@@ -450,9 +450,24 @@ h3 {
   font-size: 1.7rem;
 }
 
+h4 {
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 1px;
+  margin: 0;
+  font-size: 1.4rem;
+}
+
 p {
   font-size: 1.4rem;
   line-height: 2.2rem;
+}
+
+hr {
+  width: 70%;
+  height: 3px;
+  border: none;
+  background-color: #3f3f3f;
+  margin-bottom: 5%;
 }
 
 #content {
@@ -595,6 +610,36 @@ li.str:before {
   cursor: pointer;
 }
 
+#header-img {
+  width: 100%;
+}
+
+#header-img img {
+  width: 100vw;
+  height: 90vh;
+  object-fit: cover;
+}
+
+#project-content {
+  width: 90%;
+  padding: 5%;
+  padding-top: 0%;
+}
+
+#project-content p {
+  margin-top: 0;
+}
+
+#project-content a, #project-content a:visited {
+  text-decoration: none;
+  color: #FFCC02;
+}
+
+#project-content img {
+  width: 100%;
+  margin-bottom: 5%;
+}
+
 footer {
   width: 90%;
   height: 100%;
@@ -668,7 +713,7 @@ footer p {
   background: #efefef;
   height: 100vh;
   padding-top: 10vh;
-  position: absolute;
+  position: fixed;
   right: 0vw;
   top: 0;
   z-index: 99;
@@ -696,9 +741,11 @@ footer p {
 
 #page-title {
   padding: 5%;
+  padding-top: 20%;
   width: 90%;
   height: 100%;
   color: #000;
+  z-index: 999;
 }
 
 #page-title h1 {
@@ -728,11 +775,19 @@ footer p {
 }
 
 @media (min-width: 1000px) { 
+  hr {
+    margin-bottom: 3%;
+  }
+
+  .hamburger {
+    position: fixed;
+  }
+
   #side-menu {
     width: 30vw;
     height: 90vh;
     padding-top: 10vh;
-    position: absolute;
+    position: fixed;
     right: 0vw;
     top: 0;
     z-index: 99;
@@ -781,6 +836,11 @@ footer p {
     color: #FFCC02;
   }
 
+  #project-content img {
+    width: 100%;
+    margin-bottom: 2%;
+  }
+
   footer {
     text-align: left;
     padding-top: 0.1%;
@@ -809,5 +869,13 @@ footer p {
 
   #socials img {
     width: 6vw;
+  }
+
+  .center-desktop {
+    text-align: center;
+  }
+
+  .phone-img {
+    width: 25% !important;
   }
 }

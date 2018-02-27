@@ -1,0 +1,110 @@
+<!doctype html>
+
+<html lang="">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Projects - Alexander Pearson-Goulart</title>
+    <meta name="description" content="All projects from Alexander Pearson-Goulart">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../hamburgers.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>
+
+        $(document).scroll(function (e) {
+
+            var scrollAmount = $(window).scrollTop();
+            var documentHeight = $(window).height();
+
+            var scrollPercent = (scrollAmount / documentHeight) * 100;
+
+            if (scrollPercent > 90) {
+                $('.main-header').addClass('solid-head');
+            }
+
+            if (scrollPercent < 90) {
+                $('.main-header').removeClass('solid-head');
+            }
+
+        });
+
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+
+    <style>
+        .black .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+            background-color: #000 !important; 
+          }
+        #projects {
+            padding-top: 0vh;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="content">
+        <div id="page-title"><h1 class="black">YourUnity</h1></div>
+        <div class="black hamburger hamburger--slider">
+            <div class="hamburger-box">
+              <div class="hamburger-inner"></div>
+            </div>
+        </div>
+
+        <div id="side-menu">
+            <ul>
+                <h3 class="black"><a href="../index.html">Home</a></h3>
+                <br />
+                <h3 class="black"><a href="../Resume.pdf">Resume</a></h3>
+                <br />
+                <h3 class="black"><a href="all.html">Projects</a></h3>
+                <br />
+                <h3 class="black"><a href="../socials.html">Socials</a></h3>
+                <br />
+                <h3 class="black"><a href="https://medium.com/@pearsongoulart/">Blog</a></h3>
+            </ul>
+        </div>
+
+        <!-- <section id="header-img">
+            <img src="../images/yourunity.png">
+        </section> -->
+
+        <section id="project-content">
+            <p class="italic center-desktop">Laravel Framework, LAMP Stack, Google API</p>
+            <p class="center-desktop"><a href="https://yourunity.org">https://yourunity.org</a></p>
+            <hr />
+            <p>YourUnity, a web application that brings college students and their communities together.</p>
+            <p>Through this service, Community Service organizations within San Diego can post and advertise their events to everyone on the YourUnity mobile application.</p>
+            <p>Co-founded by myself and one other student at SDSU, the service is developed and ran by a small team of three.</p>
+            <p>The Laravel Framework was chosen due to our team's previous projects in PHP, and has allowed us to scale and develop the platform at a much faster rate than other frameworks available.</p>
+            <p>If you would like to check out YourUnity, <a href="https://yourunity.org">check out our website</a>, where you can also request access to the service if you are a community service provider within the San Diego area.</p>
+        </section>
+
+        <footer>
+            <p>Alexander Pearson-Goulart &copy; 2018</p>
+        </footer>
+
+    </div>
+
+</body>
+
+<script>
+    var $hamburger = $(".hamburger");
+    $("#side-menu").toggle();
+    $hamburger.click(function () {
+        $hamburger.toggleClass("is-active");
+        $("#side-menu").toggle(100);
+        // Do something else, like open/close menu
+    });
+</script>
+
+</html>
