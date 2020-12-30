@@ -10,160 +10,59 @@
         <meta name="description" content="Alexander Pearson-Goulart - Entrepeneur, Web Developer, Data Analyst">
         <meta name="viewport" content="width=device-width, intial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="hamburgers.css">
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        
-        <script>
-        
-            $(document).scroll(function(e){
-
-	            var scrollAmount = $(window).scrollTop();
-                var documentHeight = $(window).height();
-                
-                var scrollPercent = (scrollAmount / documentHeight) * 100;
-                
-                if(scrollPercent > 90) {
-                    $('.main-header').addClass('solid-head');
-	            }
-                
-                if(scrollPercent < 90) {
-                    $('.main-header').removeClass('solid-head');
-                }
-                
-            });
-        
-        </script>
 	    
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-98226688-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98226688-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-  gtag('config', 'UA-98226688-1');
-</script>
+        gtag('config', 'UA-98226688-1');
+        </script>
 
-            <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-    
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <link rel="stylesheet" href="style.css">
     </head>
     
     <body>
         
-        <div id="content">
-            <!-- <img class="headshot" src="images/headshot.png"> -->
-            <div class="background"></div>
-
-            <div id="side-menu">
-                    <ul>
-                        <h3 class="black"><a href="Resume.pdf">Resume</a></h3>
-                        <br />
-                        <h3 class="black"><a href="projects/all.html">Projects</a></h3>
-                        <br />
-                        <h3 class="black"><a href="socials.html">Socials</a></h3>
-                        <br />
-                        <h3 class="black"><a href="https://medium.com/@pearsongoulart/">Blog</a></h3>
-                    </ul>
-                </div>
-
-            <div id="name-container">
-                <div id="name">
-                    <h1>Alexander</h1>
-                    <h1 class="indent">Pearson-Goulart</h1>
-                </div>
-
-                <div class="white hamburger hamburger--slider">
-                    <div class="hamburger-box">
-                      <div class="hamburger-inner"></div>
-                    </div>
-                </div>
-
-                <div id="arrow">
-                    <a href="#intro"><span></span></a>
-                </div>
+        <div class="row text-center" style="margin-top: 18vh">
+            <div class="col-12">
+                <img src="images/headshot.png" class="headshot-img">
             </div>
+        </div>
+        <div class="row text-center mt-4">
+            <div class="col-6 offset-3">
+                <h1>Alexander Pearson-Goulart</h1>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-4 offset-4">
+                Entrepeneur, Web Developer, Data Analyst.
+            </div>
+        </div>
+        <div class="row text-center mt-4">
+            <div class="col-6 offset-3">
+                <span class="light-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a lacinia lorem. Sed volutpat iaculis mauris, quis lobortis ipsum dignissim eu.
+                </span>
+            </div>
+        </div>
 
-            <section id="intro">
-                <h2>Hello, I'm <span class="yellow">Alexander.</span></h2>
-
-                <p>I like to solve social problems with novel technologies.</p>
-
-                <p>I currently attend San Diego State University, completing a B.S. in Computer Science with a minor in Gerontology.</p>
-
-                <p>Currently my emphasis in my studies is data analysis and computation, with the goal of tying in my strong web development background to master on-the-go analysis of constantly changing data.</p>
-
-                <p>Outside of my studies and profession, I enjoy biking, running, and finding the next concert to attend.</p>
-            </section>
-            
-            <section id="skills">
-                <h2>I can do <span class="black">a lot.</span></h2>
-
-                <ul>
-                    <li class="str">Java</li>
-                    <li class="str">Typescript/Angular</li>
-                    <li class="str">SASS/LESS</li>
-                    <li class="str">Laravel Framework</li>
-                    <li class="str">SQL/MySQL</li>
-                    <li class="str">Swift</li>
-                    <li class="str">Python</li>
-                </ul>
-            </section>
-
-            <section id="projects">
-                <h2>Here's some things I've <span class="yellow">done.</span></h2>
-
-                <div class="indent">
-                    <h3 class="black"><a href="projects/yourunity.html">YourUnity</a></h3>
-                    <p class="italic">Laravel Framework, LAMP Stack, Google API</p>
-                    <p>Web application that brings college students and their communities together.</p>
-
-                    <h3 class="black"><a href="projects/yourunityapp.html">YourUnity Mobile</a></h3>
-                    <p class="italic">Android, iOS, Ionic Framework</p>
-                    <p>Application that gives college students access to volunteer events in their area.</p>
-
-                    <h3 class="black"><a href="projects/weathercompare.html">Weather Compare</a></h3>
-                    <p class="italic">HTML, CSS, Javascript, Weather.com API</p>
-                    <p>Compares the weather in two different locations in the United States.</p>
-
-                    <h3 class="black"><a href="projects/all.html">More.</a></h3>
-                </div>
-
-            </section>
-
-            <footer>
-                <p>Alexander Pearson-Goulart &copy; 2018</p>
-            </footer>
-
+        <div class="row text-center" style="margin-top: 15vh">
+            <div class="col-12">
+                <i class="fas fa-chevron-down" style="font-size: 32px; color: #0047ec"></i>
+            </div>
         </div>
 
     </body>
 
-    <script>
-        var $hamburger = $(".hamburger");
-        $("#side-menu").toggle();
-        $hamburger.click(function() {
-            $hamburger.toggleClass("is-active");
-            $("#side-menu").toggle(100);
-            // Do something else, like open/close menu
-        });
-    </script>
-
 </html>
-
-<!-- <ul class="side-links">
-        <li>
-            <a href="">Resume</a>
-        </li>
-        <li>
-            <a href="">Projects</a>
-        </li>
-        <li>
-            <a href="">Blog</a>
-        </li>
-        <li>
-            <a href="">Contact</a>
-        </li>
-    </ul> -->
