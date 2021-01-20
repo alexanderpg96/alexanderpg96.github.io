@@ -1,169 +1,226 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexander Pearson-Goulart</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600,900&family=Roboto+Mono:wght@800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap" rel="stylesheet">
 
-<html lang="">
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            background: #FAFAFA;
+            /* background: rgb(224,246,236);
+            background: linear-gradient(130deg, rgba(224,246,236,1) 0%, rgba(207,242,226,1) 100%); */
+        }
 
-    <head>
-    
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Alexander Pearson-Goulart</title>
-        <meta name="description" content="Alexander Pearson-Goulart - Entrepeneur, Web Developer, Data Analyst">
-        <meta name="viewport" content="width=device-width, intial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="hamburgers.css">
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        
-        <script>
-        
-            $(document).scroll(function(e){
+        h1 {
+            font-weight: 900;
+            font-size: 3rem;
+        }
 
-	            var scrollAmount = $(window).scrollTop();
-                var documentHeight = $(window).height();
-                
-                var scrollPercent = (scrollAmount / documentHeight) * 100;
-                
-                if(scrollPercent > 90) {
-                    $('.main-header').addClass('solid-head');
-	            }
-                
-                if(scrollPercent < 90) {
-                    $('.main-header').removeClass('solid-head');
-                }
-                
-            });
-        
-        </script>
-	    
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-98226688-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        p {
+            font-family: 'Poppins', sans-serif;
+            color: rgb(51, 51, 51);
+        }
 
-  gtag('config', 'UA-98226688-1');
-</script>
+        a {
+            color: #57cc99;
+            text-decoration: none;
+        }
 
-            <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-    
-    </head>
-    
-    <body>
-        
-        <div id="content">
-            <!-- <img class="headshot" src="images/headshot.png"> -->
-            <div class="background"></div>
+        a:hover {
+            text-decoration: underline;
+            color: #57cc99;
+        }
 
-            <div id="side-menu">
-                    <ul>
-                        <h3 class="black"><a href="Resume.pdf">Resume</a></h3>
-                        <br />
-                        <h3 class="black"><a href="projects/all.html">Projects</a></h3>
-                        <br />
-                        <h3 class="black"><a href="socials.html">Socials</a></h3>
-                        <br />
-                        <h3 class="black"><a href="https://medium.com/@pearsongoulart/">Blog</a></h3>
-                    </ul>
-                </div>
+        table {
+            border-collapse:separate;
+            border-spacing: 0 10px;
+        }
 
-            <div id="name-container">
-                <div id="name">
-                    <h1>Alexander</h1>
-                    <h1 class="indent">Pearson-Goulart</h1>
-                </div>
+        img.portrait {
+            width: 15%;
+            border-radius: 50%;
+        }
 
-                <div class="white hamburger hamburger--slider">
-                    <div class="hamburger-box">
-                      <div class="hamburger-inner"></div>
+        .protrait-container {
+            margin-top: 6vh;
+        }
+
+        a .fab {
+            color: rgb(37, 37, 37);
+            font-size: 26px;
+            transition: all 400ms;
+            padding-bottom: 3px;
+            border-bottom: 3px solid rgba(0,0,0,0);
+        }
+
+        .social-link {
+            margin-right: 20px;
+            display: inline-block;
+        }
+
+        .social-link:last-child {
+            margin-right: 0;
+        }
+
+        .fab:hover {
+            color: #57cc99;
+            transition: all 250ms;
+            border-bottom: 3px solid #57cc99;
+        }
+        a.header-link {
+            text-decoration: none;
+            color: #000;
+            font-weight: 400;
+            font-family: 'Poppins', sans-serif;
+            transition: all 400ms;
+        }
+
+        a.header-link:hover {
+            color: #57cc99;
+            transition: all 250ms;
+        }
+
+        .content-container {
+            width: 50%;
+            margin-left: 25%;
+        }
+
+        .light-bold-text {
+            font-weight: 800;
+            color: rgb(51, 51, 51);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        td.table-text {
+            padding-left: 25px;
+        }
+
+        td.table-icon {
+            font-size: 24px;
+            vertical-align: top;
+        }
+
+        .footer-container {
+            margin-top: 7vh;
+            margin-bottom: 3vh;
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .content-container {
+                width: 90%;
+                margin-left: 5%;
+            }
+
+            img.portrait {
+            width: 200px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-4 pt-3">
+            <div class="col-lg-4 offset-lg-4">
+                <div class="row">
+                    <div class="col-4 text-center">
+                        <a href="https://www.dropbox.com/s/3pqhgk8kukwx1gi/Alexander%20Pearson-Goulart%20Resume.pdf?dl=0" target="_blank" class="header-link">Resume</a>
+                    </div>
+                    <div class="col-4 text-center">
+                        <a href="https://us7.list-manage.com/contact-form?u=7e7c1c6648c6bbf57a5c9c76e&form_id=cf7552b6586ac08826375dfb621d5970" target="_blank" class="header-link">Contact</a>
+                    </div>
+                    <div class="col-4 text-center">
+                        <a href="https://medium.com/@pearsongoulart" target="_blank" class="header-link">Blog</a>
                     </div>
                 </div>
-
-                <div id="arrow">
-                    <a href="#intro"><span></span></a>
+            </div>
+        </div>
+        <div class="row protrait-container">
+            <div class="col-12 text-center">
+                <img class="portrait" src="portrait.jpg" />
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <div class="social-link"><a href="https://github.com/alexanderpg96" target="_blank"><i class="fab fa-github-square"></i></a></div>
+                <div class="social-link"><a href="https://www.linkedin.com/in/alexander-pearson-goulart/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
+                <div class="social-link"><a href="https://twitter.com/pearsongoulart" target="_blank"><i class="fab fa-twitter-square"></i></a></div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12 text-center">
+                <h1>Alexander Pearson-Goulart</h1>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-xl-8 offset-xl-2">
+                <div class="row">
+                    <div class="col-xl-4 light-bold-text text-center">
+                        📍&nbsp; Bay Area & San Diego
+                    </div>
+                    <div class="col-xl-4 light-bold-text text-center mt-xl-0 mt-3">
+                        🏗 &nbsp; Software Architect
+                    </div>
+                    <div class="col-xl-4 light-bold-text text-center mt-xl-0 mt-3">
+                        <p class="text-xl-right">🧠 &nbsp;Constantly learning</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="row mt-2">
+                <div class="col-12">
+                    <table>
+                        <tr>
+                            <td class="table-icon">
+                                <p>👋</p>
+                            </td>
+                            <td class="table-text">
+                                <p> Hi, I'm Alexander!</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-icon">
+                                <p>🎓</p>
+                            </td>
+                            <td class="table-text">
+                                <p> I graduated from San Diego State University with an Undergrad in Computer Science and a Minor in Gerontology. </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-icon">
+                                <p>🚴‍♂️</p>
+                            </td>
+                            <td class="table-text">
+                                <p> For fun, I love to bike and run. Last year in 2020, I biked and ran for over 1,300 miles.</p> 
+                                <p> This year, I am planning on doing two bike-packing trips that will span over 3,000 miles!</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-icon">
+                                <p>👨‍💻</p>
+                            </td>
+                            <td class="table-text">
+                                <p> For work, I am first a problem solver and second a web programmer. At my current position I use Typescript, Angular, Python, SQL, and AWS Cloud.</p> 
+                                <p> I love solving social problems with novel technical solutions. You can check out my detailed past work <a href="https://www.dropbox.com/s/3pqhgk8kukwx1gi/Alexander%20Pearson-Goulart%20Resume.pdf?dl=0" target="_blank">here</a>.</p>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
 
-            <section id="intro">
-                <h2>Hello, I'm <span class="yellow">Alexander.</span></h2>
-
-                <p>I like to solve social problems with novel technologies.</p>
-
-                <p>I currently attend San Diego State University, completing a B.S. in Computer Science with a minor in Gerontology.</p>
-
-                <p>Currently my emphasis in my studies is data analysis and computation, with the goal of tying in my strong web development background to master on-the-go analysis of constantly changing data.</p>
-
-                <p>Outside of my studies and profession, I enjoy biking, running, and finding the next concert to attend.</p>
-            </section>
-            
-            <section id="skills">
-                <h2>I can do <span class="black">a lot.</span></h2>
-
-                <ul>
-                    <li class="str">Java</li>
-                    <li class="str">Typescript/Angular</li>
-                    <li class="str">SASS/LESS</li>
-                    <li class="str">Laravel Framework</li>
-                    <li class="str">SQL/MySQL</li>
-                    <li class="str">Swift</li>
-                    <li class="str">Python</li>
-                </ul>
-            </section>
-
-            <section id="projects">
-                <h2>Here's some things I've <span class="yellow">done.</span></h2>
-
-                <div class="indent">
-                    <h3 class="black"><a href="projects/yourunity.html">YourUnity</a></h3>
-                    <p class="italic">Laravel Framework, LAMP Stack, Google API</p>
-                    <p>Web application that brings college students and their communities together.</p>
-
-                    <h3 class="black"><a href="projects/yourunityapp.html">YourUnity Mobile</a></h3>
-                    <p class="italic">Android, iOS, Ionic Framework</p>
-                    <p>Application that gives college students access to volunteer events in their area.</p>
-
-                    <h3 class="black"><a href="projects/weathercompare.html">Weather Compare</a></h3>
-                    <p class="italic">HTML, CSS, Javascript, Weather.com API</p>
-                    <p>Compares the weather in two different locations in the United States.</p>
-
-                    <h3 class="black"><a href="projects/all.html">More.</a></h3>
+            <div class="row footer-container">
+                <div class="col-12 text-center" style="color: rgb(97, 97, 97);">
+                    Made with ❤️ by Alexander.
                 </div>
-
-            </section>
-
-            <footer>
-                <p>Alexander Pearson-Goulart &copy; 2018</p>
-            </footer>
-
+            </div>
         </div>
-
-    </body>
-
-    <script>
-        var $hamburger = $(".hamburger");
-        $("#side-menu").toggle();
-        $hamburger.click(function() {
-            $hamburger.toggleClass("is-active");
-            $("#side-menu").toggle(100);
-            // Do something else, like open/close menu
-        });
-    </script>
-
+    </div>
+</body>
 </html>
-
-<!-- <ul class="side-links">
-        <li>
-            <a href="">Resume</a>
-        </li>
-        <li>
-            <a href="">Projects</a>
-        </li>
-        <li>
-            <a href="">Blog</a>
-        </li>
-        <li>
-            <a href="">Contact</a>
-        </li>
-    </ul> -->
